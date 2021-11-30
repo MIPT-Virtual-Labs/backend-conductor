@@ -1,0 +1,3 @@
+[submodule "submodules/solver-dummy"]
+	path = submodules/solver-dummy
+	url = https://github.com/MIPT-Virtual-Labs/solver-dummy.git
