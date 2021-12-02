@@ -1,3 +1,6 @@
 [submodule "submodules/solver-dummy"]
 	path = submodules/solver-dummy
 	url = https://github.com/MIPT-Virtual-Labs/solver-dummy.git
+[submodule "submodules/lopato_VL_MIPT_repo"]
+	path = submodules/lopato_VL_MIPT_repo
+	url = https://github.com/MIPT-Virtual-Labs/lopato_VL_MIPT_repo.git

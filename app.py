@@ -1,4 +1,5 @@
 import solver_dummy
+import solver_gas_dynamics_1d
 from flask import Flask, request
 
 app = Flask(__name__)
@@ -17,10 +18,15 @@ def solver(solvername):
     if solvername == "dummy":
         response = solver_dummy.handle_request(request_json)
 
-    # elif solvername == "some_other_solver"
-    #     response = some_other_solver.handle_request(request_json)
+    elif solvername == "gas_dynamics_1d":
+        response = solver_gas_dynamics_1d.handle_request(request_json)
 
     else:
-        response = {"status": "failed", "info": f"Unknown solver: {solvername}"}
+        response = {
+            "status": "error",
+            "errors": [
+                {"error": f"unknown solver: {solvername}", "field": "solvername"}
+            ],
+        }
 
     return response
