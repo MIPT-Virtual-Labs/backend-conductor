@@ -1,7 +1,23 @@
+backports.entry-points-selectable==1.1.1
+cfgv==3.3.1
 click==8.0.3
+distlib==0.3.3
+filelock==3.4.0
 Flask==2.0.2
+identify==2.4.0
 itsdangerous==2.0.1
 Jinja2==3.0.2
 MarkupSafe==2.0.1
+nodeenv==1.6.0
+numpy==1.21.4
+platformdirs==2.4.0
+pre-commit==2.15.0
+pydantic==1.8.2
+PyYAML==6.0
+six==1.16.0
 -e git+https://github.com/MIPT-Virtual-Labs/solver-dummy.git@39fb18d58b89ed0565626ceaaea072a08006604b#egg=solver_dummy&subdirectory=../../../submodules/solver-dummy
+-e git+https://github.com/MIPT-Virtual-Labs/lopato_VL_MIPT_repo.git@5f7a48f09858412071d2f3d68fb1572e64289dc0#egg=solver_gas_dynamics_1d&subdirectory=../../../submodules/lopato_VL_MIPT_repo
+toml==0.10.2
+typing_extensions==4.0.1
+virtualenv==20.10.0
 Werkzeug==2.0.2
