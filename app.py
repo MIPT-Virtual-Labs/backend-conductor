@@ -1,6 +1,8 @@
 import solver_dummy
+import json
+from time import sleep
 import solver_gas_dynamics_1d
-from flask import Flask, request
+from flask import Flask, request, jsonify, Response
 from flask_cors import CORS, cross_origin
 
 
@@ -17,9 +19,11 @@ def hello_world():
 @app.route("/solver/<solvername>", methods=["POST"])
 @cross_origin()
 def solver(solvername):
-
-    request_json = request.get_json()
+    print(5, request)
+    request_json = request.get_json(force=True)
     print(request_json)
+    sleep(1)
+    # return {'result': 'ok'}
 
     if solvername == "dummy":
         response = solver_dummy.handle_request(request_json)
@@ -34,5 +38,10 @@ def solver(solvername):
                 {"error": f"unknown solver: {solvername}", "field": "solvername"}
             ],
         }
-
-    return response
+    # print("ANSWER:", jsonify(response))
+    r1 = jsonify(response)
+    r1.status_code = 200
+    r1.headers = {"Content-Type": "application/json"}
+    res = Response(response=json.dumps(response), status=200, mimetype='application/json')
+    # print(res)
+    return r1
