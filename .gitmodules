@@ -4,3 +4,6 @@
 [submodule "submodules/lopato_VL_MIPT_repo"]
 	path = submodules/lopato_VL_MIPT_repo
 	url = https://github.com/MIPT-Virtual-Labs/lopato_VL_MIPT_repo.git
+[submodule "submodules/CrosSolver"]
+	path = submodules/CrosSolver
+	url = https://github.com/MIPT-Virtual-Labs/CrosSolver.git
